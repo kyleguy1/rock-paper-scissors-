@@ -28,6 +28,9 @@ selectionButtons.forEach(selectionButton => {
   })
 })
 
+// Makes the selection and displays the winner 
+// Whoever the winner is, the score shall increase
+
 function makeSelection(selection) {
   const computerSelection = randomSelection()
   const yourWinner = isWinner(selection, computerSelection)
@@ -39,6 +42,8 @@ function makeSelection(selection) {
   if (yourWinner) incrementScore(yourScoreSpan)
   if (computerWinner) incrementScore(computerScoreSpan)
 }
+
+// Displays the increased score by 1 
 
 function incrementScore(scoreSpan) {
   scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
